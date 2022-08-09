@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <title>Calculator</title>
+
+    <meta property="og:image" content="https://img.icons8.com/color/400/000000/apple-calculator.png" key="ogimage" />
+    <meta property="og:site_name" content="Calculator" key="ogsitename" />
+    <meta property="og:title" content="Calculator" key="ogtitle" />
+    <meta property="og:description" content="A simple online calculator for your daily use" key="ogdesc" />
+            
+     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    
+
+  </head>
+  <body>
+    <form name="inputForm" onsubmit="return false">
+        <div class="calc-form col-6 mt-5 mx-auto">
+          <!--  <label>Expression</label>  -->
+
+          <p id="exp">Enter an expression to evaluate</p>
+
+            <input class="form-control" type="text"  id="val" placeholder="Enter an expression to calculate" aria-label="deafult input example">
+                    
+            
+            
+            <div class="container mx-auto col-20 text-center mt-5">
+                
+                     <!-- create button and assign value to each button -->
+                     <!-- dis("1") will call function dis to display value -->
+
+                     <input type="button" value="CLEAR" onclick="clr()" class="btn btn-dark mb-2">
+                     <br>
+                     <input type="button" value="1" onclick="dis('1')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="2" onclick="dis('2')" class="btn btn-dark mb-2">  
+                     <input type="button" value="3" onclick="dis('3')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="/" onclick="dis('/')" class="btn btn-primary mb-2"> 
+                     <br>
+                     <input type="button" value="4" onclick="dis('4')" class="btn btn-dark mb-2">  
+                     <input type="button" value="5" onclick="dis('5')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="6" onclick="dis('6')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="-" onclick="dis('-')" class="btn btn-primary mb-2"> 
+                     <br>
+                     <input type="button" value="7" onclick="dis('7')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="8" onclick="dis('8')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="9" onclick="dis('9')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="+" onclick="dis('+')" class="btn btn-primary mb-2"> 
+                     <br>
+                     <input type="button" value="." onclick="dis('.')" class="btn btn-dark mb-2"> 
+                     <input type="button" value="0" onclick="dis('0')" class="btn btn-dark mb-2"> 
+                     <!-- solve function call function solve to evaluate value -->
+                     <input type="button" value="=" onclick="doCalc(1)" class="btn btn-dark mb-2" id="evaluate">
+                     <input type="button" value="*" onclick="dis('*')" class="btn btn-primary mb-2"> 
+                  
+            </div>
+
+            <div class="container mx-auto col-6 text-center mt-5">
+               <!--<input type="button" value="Calculate" class="btn btn-primary mb-2" onClick="doCalc(1)">-->
+               
+               <input type="button" value="Log10" class="btn btn-primary mb-2" onClick="doCalc(5)">
+               <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
+               <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
+               <input type="button" value="Square" class="btn btn-primary mb-2" onClick="doCalc(8)">
+             
+           </div>   
+
+            
+        </div>
+                       
+
+    </form>
+
+    <div class="fixed-bottom">
+      <a href="https://github.com/nikiljos/TFP-JavaScript-Task"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github"></a>
+    </div>
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+    <script src="calc.js"></script>
+  </body>
+</html>
